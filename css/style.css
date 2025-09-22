@@ -1,0 +1,280 @@
+@import url(nav.css?v=1.24.0); /* Brings the Nav Bar styles */ 
+@import url(ui-structure.css?v=8.0.0); /* Brings the main styles for the structure, important */ 
+@import url(ui-elements/content-box.css?v=8); /* Its a basic container with many uses */ 
+@import url(ui-elements/default-rules.css?v=8); /* Brings classes with propetys that all elements could use */ 
+@import url(ui-elements/message.css?v=7); /* Brings the styles for the message box */
+@import url(ui-elements/windows.css?v=5); /* Brings the styles for the message box */
+@import url(ui-elements/tables.css?v=10); /* Brings the styles for the tables */
+@import url(ui-elements/data-line.css?v=8); /* Brings the styles for the data line */
+@import url(ui-elements/select.css?v=3); /* Brings the styles for the data line */
+@import url(ui-elements/md-elements.css?v=6); /* Brings the styles for some things of material web components */
+@import url(ui-elements/window-navigation.css?v=9); 
+@import url(ui-elements/theme-selector.css?v=7);
+@import url(ui-elements/editor.css?v=2);
+@import url(ui-elements/folder-files.css?v=1.9);
+@import url(ui-elements/input.css?v=7);
+@import url(ui-elements/button.css?v=15);
+@import url(ui-elements/task.css?v=7);
+@import url(ui-elements/search.css);
+@import url(ui-elements/view-transitions.css?v=3);
+@import url(ui-elements/sub-section.css?v=1.9.0);
+@import url(ui-elements/calendar.css?v=1.28.0);
+@import url(ui-elements/animations.css?v=8);
+@import url(ui-elements/canvas.css);
+@import url(ui-elements/schedulePicker.css);
+@import url(ui-elements/steps.css);
+@import url(ui-elements/appt-creator.css?v=2);
+@import url(ui-elements/home-dashboard.css);
+@import url(ui-elements/popover.css);
+
+::-webkit-scrollbar{display: none !important;}
+
+
+:root {
+  --md-sys-color-neutral-background: 255,255,255;
+  --md-sys-color-neutral-on-background: 0,0,0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --md-sys-color-neutral-background: 0,0,0;
+    --md-sys-color-neutral-on-background: 255,255,255;
+  }
+}
+a,button{
+  will-change: transform; 
+  -webkit-user-drag: none; 
+  user-select: none;
+}
+html{overflow: hidden;}
+
+body{
+  width:100vw;
+  height:100vh;
+  height: 100dvh;
+  margin:0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--md-sys-color-background);
+  font-family: 'Roboto', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+h1,h2,h3,h4,h5,h6,p{margin:0; color:var(--md-sys-color-on-background)}
+
+md-icon {--md-icon-font: 'Material Symbols Rounded'; }
+.material-symbols-rounded{user-select: none;}
+
+.poppins{font-family: 'Poppins', sans-serif !important;}
+.dm-sans{font-family: 'DM Sans', sans-serif !important;}
+.dm-sans-all *:not(md-icon) {font-family: 'DM Sans', sans-serif!important;}
+.bricolage{font-family: "Bricolage Grotesque", system-ui !important;}
+.inter{font-family: 'inter', sans-serif !important;}
+.inter-all *:not(md-icon) {font-family: 'Inter', sans-serif!important;}
+.weight-600{font-weight: 600 !important;}
+.weight-500{font-weight: 500 !important;}
+input::-webkit-date-and-time-value{ text-align:left; }
+
+md-dialog form::-webkit-scrollbar{display:none !important}
+md-icon.dynamic{--md-icon-size: ; vertical-align: middle;}
+md-icon.filled{font-variation-settings: 'FILL' 1;}
+.pretty{
+  --md-icon-size: 64px;
+  padding:24px;
+  background:var(--md-sys-color-surface-container-highest); 
+  color: var(--md-sys-color-on-background);
+  border-radius:88px;
+  font-variation-settings: 'FILL' 0;
+  transition: font-variation-settings 500ms;
+}
+md-icon.transparent{
+  background:transparent !important;
+}
+md-icon.pretty.small{
+  --md-icon-size: 24px;
+  padding:8px;
+  border-radius:64px;
+}
+md-icon.pretty.medium{
+  --md-icon-size: 32px;
+  padding:8px;
+  border-radius:64px;
+}
+md-icon.pretty-minimal-medium{
+  --md-icon-size: 32px;
+  padding:8px;
+  border-radius:64px;
+}
+md-icon.pretty-minimal{
+  --md-icon-size: 64px;
+}
+md-icon.absolute-card{
+  --md-icon-size: 164px;
+  font-variation-settings: 'FILL' 1;
+  opacity: 0.2;
+  position: absolute;
+  top:0;
+  /* top: 50%;
+  transform: translateY(-50%); */
+
+  right: -32px;
+}
+md-icon.absolute-card.medium{
+  --md-icon-size: 96px;
+  opacity:0.05;
+  /* right:-32px; */
+}
+md-icon.absolute-card.small{
+  --md-icon-size: 64px;
+  right: -16px;
+  opacity:0.1
+}
+md-icon.absolute-card.centered{right:0;}
+
+md-filled-tonal-button.big, md-filled-button.big, md-outlined-button.big {
+  /* height: 64px; */
+  height: 48px;
+  /* --md-filled-tonal-button-padding: 16px 32px;
+  --md-filled-tonal-button-font-size: 16px;
+  --md-filled-tonal-button-border-radius: 16px; */
+}
+md-outlined-icon-button.big, md-filled-tonal-icon-button.big{
+  transition:width 125ms cubic-bezier(0,0,0.5,1);
+  width:48px;
+  height:48px;
+}
+md-outlined-icon-button.big:hover, md-filled-tonal-icon-button.big:hover{
+  width:64px;
+}
+
+h1{
+  font-size:var(--md-sys-typescale-headline-large-font-size) !important;
+  /* line-height:64px !important; */
+  margin: 0 0 16px 0; 
+  font-weight: 600;
+}
+h2{
+  font-size:var(--md-sys-typescale-headline-medium-font-size) !important;
+  /* line-height:56px !important; */
+  margin: 16px 0 8px 0;
+  font-weight: 500;
+}
+h3{
+  font-size:var(--md-sys-typescale-headline-small-font-size) !important;
+  /* line-height:48px !important; */
+  /* margin: 8px 0 16px 0; */
+  font-weight: 500;
+}
+h4{
+  font-size:var(--md-sys-typescale-subtitle-medium-font-size) !important;
+  /* line-height:40px !important; */
+  margin: 0 0 16px 0;
+}
+
+
+/* [data-tooltip] {position: relative;}
+[data-tooltip]:hover::after {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: auto;
+  z-index: 100;
+  content: attr(data-tooltip);
+
+  font-size:var(--md-sys-typescale-label-medium-font-size);
+  padding:4px 8px;
+  border-radius: 24px;
+  background: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface-variant);
+  box-shadow: 0 0 0 1px var(--md-sys-color-surface-container-highest);
+
+  white-space: nowrap;
+  animation: tooltip-in 200ms cubic-bezier(0.1, 0.8, 0, 1);
+} */
+
+[data-tooltip].tooltip-right::after {left: 0;}
+.tooltip-left::after {right: 0;}
+.tooltip-top::after {bottom: calc(100% + 4px);}
+
+
+@keyframes tooltip-in {
+  0% {opacity: 0; transform: translateY(-4px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+
+.sbcorp-icon{
+  display:flex;
+  gap:8px;
+  align-items: center;
+  padding:8px 16px;
+  max-width: fit-content;
+  background:var(--md-sys-color-surface-container);
+  border-radius:64px;
+  font-family: "DM Sans", system-ui;
+  font-size:18px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.header-account-circle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius:24px;
+  width:24px;
+  height:24px;
+  font-family: "Bricolage Grotesque", system-ui;
+  font-weight: 600;
+  background:var(--md-sys-color-surface-container);
+}
+
+/* 
+@keyframes height-animation-small-in {
+  0% {max-height: 0px;}
+  100% {max-height: 248px;}
+}
+@keyframes height-animation-small-out {
+  0% {max-height: 248px;}
+  100% {max-height: 0px;}
+}
+
+@keyframes height-animation-medium-in {
+  0% {max-height: 0px;}
+  100% {max-height: 328px;}
+}
+
+.height-animation-small-in{
+  overflow: hidden;
+  animation: height-animation-small-in 700ms;
+}
+
+.height-animation-small-out{
+  overflow: hidden;
+  animation: height-animation-small-out 700ms;
+} */
+.transparent{
+  background:transparent;
+  
+}
+
+.codemelon-box{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border-radius:24px;
+  padding:8px 12px;
+  padding-right:16px;
+  background:var(--md-sys-color-surface-container);
+  font-family: 'poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  /* scale:0.8; */
+  user-select: none;
+}
+.codemelon-box.absolute{
+  position:absolute;
+  top: calc(env(safe-area-inset-top) + 24px) !important;
+}
