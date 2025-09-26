@@ -590,75 +590,6 @@ nav button.nav-button md-ripple{
   nav.nav-style-9 button.nav-button:hover + * + *{transform: scale(1.03);}
   
   nav.nav-style-9 .header-account-circle > * {border-radius:64px;}
-
-
-  nav.nav-style-10{
-    display:flex;
-    flex-direction:column;
-
-    background:transparent;
-    min-width:272px;
-    border-radius:0;
-    padding:16px;
-    line-height: initial !important;
-    gap:0;
-
-    /* border-right: 1px solid var(--md-sys-color-surface-container-high); */
-  }
-
-  nav.nav-style-10 button.nav-button{
-    display:flex;
-    align-items: center;
-    gap:8px;
-
-    width:auto;
-    padding: 8px 16px;
-    border-radius:12px;
-    
-    font-size:16px;
-    background:transparent;
-    color:var(--md-sys-color-on-background);
-  }
-
-  nav.nav-style-10 button.nav-button[active]{
-    background:var(--md-sys-color-surface-container-high);
-  }
-
-  nav.nav-style-10 button.nav-button:not(:first-child):not([active]){
-    opacity: 0.6;
-  }
-
-  nav.nav-style-10 button.nav-button span:not(.icon-holder){
-    line-height:initial;
-  }
-
-  nav.nav-style-10 button.nav-button span.icon-holder{
-    all:unset;
-    height: 24px;
-  }
-
-  nav.nav-style-10 button.nav-button span.icon-holder span.material-symbols-rounded{
-    line-height: 24px;
-    padding:0 !important;
-    background: initial !important;
-    color: initial !important;
-  }
-
-  nav.nav-style-10 > :first-child:not(button.nav-button){
-    margin-bottom:16px;
-  }
-  nav.nav-style-10 button.nav-button md-ripple{
-    --md-ripple-hover-color: initial;
-    --md-ripple-pressed-color: initial;
-  }
-
-  nav.nav-style-10 button.nav-button.first-nav-element .icon-holder > span{
-    display:none;
-  }
-
-  nav.nav-style-10 button.nav-button.first-nav-element md-icon{
-    display:block !important;
-  }
   
 }
 
@@ -888,4 +819,5 @@ nav.nav-style-7 + holder > section:not(#section-home){
     padding-bottom:120px !important;
   } 
 }
+
 

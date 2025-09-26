@@ -19,7 +19,7 @@ holder{
   flex-grow: 1;
   flex-direction: column;
   position:relative;
-  /* margin:6px; */
+  margin:6px;
   border-radius:18px;
   background:var(--md-sys-color-background);
   overflow:hidden;
